@@ -22,6 +22,10 @@ class CreateUsersTable extends Migration
             $table->rememberToken();
             $table->foreignId('current_team_id')->nullable();
             $table->string('profile_photo_path', 2048)->nullable();
+            $table->timestamp('last_login_at')->nullable();
+            $table->string('last_login_ip')->nullable();
+            $table->boolean('isAdmin')->nullable();
+            $table->boolean('status')->default(1)->comment('Status');// 1 = Account ist aktiviert 0 = Account ist deaktiviert Kunde kann sich nicht anmelden.
             $table->timestamps();
         });
     }
