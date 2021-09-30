@@ -8,16 +8,15 @@
         <title>{{ config('app.name', 'Laravel') }}</title>
 
         <!-- Styles -->
-        <link rel="stylesheet" href="{{ mix('css/app.css') }}">
+        <link rel="stylesheet" href="{{ mix('css/dashboard.css') }}">
 
         @livewireStyles
 
-        <!-- Scripts -->
-        <script src="{{ mix('js/app.js') }}" defer></script>
+        
     </head>
     <body class="font-sans antialiased">
         <x-jet-banner />
-
+       
         <div class="min-h-screen bg-gray-100">
             @livewire('navigation-menu')
 
@@ -38,5 +37,7 @@
         @stack('modals')
 
         @livewireScripts
+        <!-- Scripts -->
+        <script src="{{ mix('js/dashboard.js') }}" defer></script>
     </body>
 </html>

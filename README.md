@@ -1,9 +1,11 @@
 ## Meine Testumgebung
 
-Anpassungen an Laravel instalation.
+Anpassungen an Laravel 8 instalation.
 
 - deutsche übersetzung.
-- tailwindcss anpassung.
+- tailwindcss anpassung und sass einbindung.
+- layouts trennung app / dashboard
+- standart elemente
 
 dies Umgebung ist nicht für den Produktion gedacht.
 

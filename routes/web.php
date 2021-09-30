@@ -13,10 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::view('/','page.welcome');
 
-Route::middleware(['auth:sanctum','throttle:rate_limit,1','verified'])->get('/dashboard', function () {
-    return view('dashboard');
-})->name('dashboard');
+Route::view('datenschutzerklaerung','page.datenschutzerklaerung')->name('datenschutzerklaerung');
+Route::view('impressum','page.impressum')->name('impressum');
+
+
+Route::middleware(['auth:sanctum','verified'])->group(function(){
+    Route::view('dashboard','page.dashboard')->name('dashboard');
+});

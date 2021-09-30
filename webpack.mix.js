@@ -1,5 +1,5 @@
 const mix = require('laravel-mix');
-
+const tailwindcss = require('tailwindcss'); /* Add this line at the top */
 /*
  |--------------------------------------------------------------------------
  | Mix Asset Management
@@ -16,6 +16,14 @@ mix.js('resources/js/app.js', 'public/js')
         require('postcss-import'),
         require('tailwindcss'),
     ]);
+
+mix.js('resources/js/dashboard.js', 'public/js')
+    .sass('resources/sass/dashboard.scss', 'public/css')
+    .options({
+        postCss: [ tailwindcss('./tailwind.config.js') ],
+    })
+    .version();
+
 
 if (mix.inProduction()) {
     mix.version();
