@@ -517,23 +517,6 @@ video {
 	line-height: inherit;
 }[type='file']:focus {
 	outline: 1px auto -webkit-focus-ring-color;
-}.container {
-	width: 100%;
-}@media (min-width: 640px) {.container {
-		max-width: 640px;
-	}
-}@media (min-width: 768px) {.container {
-		max-width: 768px;
-	}
-}@media (min-width: 1024px) {.container {
-		max-width: 1024px;
-	}
-}@media (min-width: 1280px) {.container {
-		max-width: 1280px;
-	}
-}@media (min-width: 1536px) {.container {
-		max-width: 1536px;
-	}
 }.prose {
 	color: #374151;
 	max-width: 65ch;
@@ -803,12 +786,18 @@ video {
 }.mx-auto {
 	margin-left: auto;
 	margin-right: auto;
-}.mx-2 {
-	margin-left: 0.5rem;
-	margin-right: 0.5rem;
 }.my-6 {
 	margin-top: 1.5rem;
 	margin-bottom: 1.5rem;
+}.my-5 {
+	margin-top: 1.25rem;
+	margin-bottom: 1.25rem;
+}.mx-5 {
+	margin-left: 1.25rem;
+	margin-right: 1.25rem;
+}.mx-2 {
+	margin-left: 0.5rem;
+	margin-right: 0.5rem;
 }.mx-1 {
 	margin-left: 0.25rem;
 	margin-right: 0.25rem;
@@ -862,6 +851,10 @@ video {
 	margin-top: -1px;
 }.mr-4 {
 	margin-right: 1rem;
+}.mb-5 {
+	margin-bottom: 1.25rem;
+}.mt-14 {
+	margin-top: 3.5rem;
 }.mb-7 {
 	margin-bottom: 1.75rem;
 }.mb-2 {
@@ -932,8 +925,14 @@ video {
 	width: 5rem;
 }.w-44 {
 	width: 11rem;
+}.w-2\/12 {
+	width: 16.666667%;
+}.w-4\/12 {
+	width: 33.333333%;
 }.min-w-0 {
 	min-width: 0px;
+}.min-w-full {
+	min-width: 100%;
 }.max-w-screen-xl {
 	max-width: 1280px;
 }.max-w-7xl {
@@ -948,6 +947,8 @@ video {
 	flex: 1 1 0%;
 }.flex-shrink-0 {
 	flex-shrink: 0;
+}.table-auto {
+	table-layout: auto;
 }.origin-top-left {
 	transform-origin: top left;
 }.origin-top {
@@ -1012,8 +1013,19 @@ video {
 	--tw-space-y-reverse: 0;
 	margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
 	margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
+}.divide-y > :not([hidden]) ~ :not([hidden]) {
+	--tw-divide-y-reverse: 0;
+	border-top-width: calc(1px * calc(1 - var(--tw-divide-y-reverse)));
+	border-bottom-width: calc(1px * var(--tw-divide-y-reverse));
+}.divide-solid > :not([hidden]) ~ :not([hidden]) {
+	border-style: solid;
+}.divide-gray-200 > :not([hidden]) ~ :not([hidden]) {
+	--tw-divide-opacity: 1;
+	border-color: rgba(229, 231, 235, var(--tw-divide-opacity));
 }.overflow-hidden {
 	overflow: hidden;
+}.overflow-x-auto {
+	overflow-x: auto;
 }.overflow-y-auto {
 	overflow-y: auto;
 }.overflow-x-hidden {
@@ -1081,15 +1093,15 @@ video {
 }.border-gray-400 {
 	--tw-border-opacity: 1;
 	border-color: rgba(156, 163, 175, var(--tw-border-opacity));
+}.border-red-600 {
+	--tw-border-opacity: 1;
+	border-color: rgba(220, 38, 38, var(--tw-border-opacity));
 }.border-blue-600 {
 	--tw-border-opacity: 1;
 	border-color: rgba(37, 99, 235, var(--tw-border-opacity));
 }.border-green-600 {
 	--tw-border-opacity: 1;
 	border-color: rgba(5, 150, 105, var(--tw-border-opacity));
-}.border-red-600 {
-	--tw-border-opacity: 1;
-	border-color: rgba(220, 38, 38, var(--tw-border-opacity));
 }.bg-white {
 	--tw-bg-opacity: 1;
 	background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
@@ -1129,6 +1141,15 @@ video {
 }.bg-gray-900 {
 	--tw-bg-opacity: 1;
 	background-color: rgba(17, 24, 39, var(--tw-bg-opacity));
+}.bg-green-500 {
+	--tw-bg-opacity: 1;
+	background-color: rgba(16, 185, 129, var(--tw-bg-opacity));
+}.bg-red-500 {
+	--tw-bg-opacity: 1;
+	background-color: rgba(239, 68, 68, var(--tw-bg-opacity));
+}.bg-green-600 {
+	--tw-bg-opacity: 1;
+	background-color: rgba(5, 150, 105, var(--tw-bg-opacity));
 }.bg-opacity-25 {
 	--tw-bg-opacity: 0.25;
 }.bg-opacity-75 {
@@ -1192,6 +1213,9 @@ video {
 }.py-10 {
 	padding-top: 2.5rem;
 	padding-bottom: 2.5rem;
+}.py-7 {
+	padding-top: 1.75rem;
+	padding-bottom: 1.75rem;
 }.pt-6 {
 	padding-top: 1.5rem;
 }.pt-5 {
@@ -1224,6 +1248,8 @@ video {
 	text-align: right;
 }.align-top {
 	vertical-align: top;
+}.align-middle {
+	vertical-align: middle;
 }.font-sans {
 	font-family: Montserrat, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }.font-mono {
@@ -1489,6 +1515,9 @@ video {
 }.focus\:bg-gray-50:focus {
 	--tw-bg-opacity: 1;
 	background-color: rgba(249, 250, 251, var(--tw-bg-opacity));
+}.focus\:bg-green-600:focus {
+	--tw-bg-opacity: 1;
+	background-color: rgba(5, 150, 105, var(--tw-bg-opacity));
 }.focus\:text-gray-700:focus {
 	--tw-text-opacity: 1;
 	color: rgba(55, 65, 81, var(--tw-text-opacity));
@@ -1670,12 +1699,20 @@ video {
 		grid-column: span 1 / span 1;
 	}.md\:mt-0 {
 		margin-top: 0px;
+	}.md\:flex {
+		display: flex;
 	}.md\:grid {
 		display: grid;
+	}.md\:w-4\/12 {
+		width: 33.333333%;
+	}.md\:w-8\/12 {
+		width: 66.666667%;
 	}.md\:grid-cols-3 {
 		grid-template-columns: repeat(3, minmax(0, 1fr));
 	}.md\:grid-cols-2 {
 		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}.md\:flex-row-reverse {
+		flex-direction: row-reverse;
 	}.md\:gap-6 {
 		gap: 1.5rem;
 	}.md\:border-t-0 {

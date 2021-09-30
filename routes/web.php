@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,4 +22,6 @@ Route::view('impressum','page.impressum')->name('impressum');
 
 Route::middleware(['auth:sanctum','verified'])->group(function(){
     Route::view('dashboard','page.dashboard')->name('dashboard');
+
+    Route::resource('user',UserController::class);
 });
