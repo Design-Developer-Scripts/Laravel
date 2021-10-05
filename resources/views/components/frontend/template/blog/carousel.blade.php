@@ -6,5 +6,5 @@
     
 </div>
 <div class="container mx-auto w-full md:w-8/12 flex justify-center my-12 px-7">
-    <a href="{{route('blog.index')}}" class="hover_effect px-5 py-3 text-base font-medium text-blue-700 bg-blue-100 border border-transparent rounded-md hover:bg-blue-200">Alle Blog einträge</a>
+    <a href="{{route('blog.index')}}" class="hover_effect px-8 py-4 text-base font-medium text-blue-700 bg-blue-100 border border-transparent rounded-full hover:bg-blue-200">Alle Blog einträge</a>
 </div>

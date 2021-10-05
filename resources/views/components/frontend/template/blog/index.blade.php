@@ -18,7 +18,7 @@
 
     <div class="w-full px-5 py-6 mx-auto space-y-5 sm:py-8 md:py-12 sm:space-y-8 md:space-y-16 max-w-7xl">
         <div class="md:flex gap-12 relative">
-            <div class="w-full md:w-8/12">
+            <div class="w-full md:w-9/12">
 
                 @foreach($content as $value)
                     <x-frontend.template.blog.card  slug="{{$value->slug}}" image="{{$value->image}}" title="{{$value->title}}" subline="{{$value->subline}}" />
@@ -28,7 +28,7 @@
                     {{ $content->render(('pagination::tailwind')) }}
                 </div>
             </div>
-            <div class="w-full md:w-4/12">
+            <div class="w-full md:w-3/12">
                 <figure class="rounded-md shadow-md overflow-hidden sticky top-0 block">
                     <img src="https://picsum.photos/200/300" alt="" title="" class="w-full " />
                 </figure>

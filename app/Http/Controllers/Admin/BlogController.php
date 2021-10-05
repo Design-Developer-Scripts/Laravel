@@ -110,7 +110,12 @@ class BlogController extends Controller
         #print'</pre>';
 
         $update['title'] = $validated['title'];
-        $update['slug'] = Controller::createUrlString($validated['slug']);
+        if(empty($validated['slug'])){
+            $update['slug'] = Controller::createUrlString($validated['title']);
+        }else{
+            $update['slug'] = Controller::createUrlString($validated['slug']);
+        }
+        
         $update['subline'] = $validated['subline'];
         $update['content'] = $validated['content'];
 

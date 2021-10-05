@@ -2,7 +2,7 @@
     <div class="w-8/12 bg-white overflow-hidden shadow-xl sm:rounded-lg px-7 py-12">
         <x-dashboard.form.input title="Titel" option="true" type="text" name="title" value="{{$content->title}}" />
 
-        <x-dashboard.form.input title="URL" option="true" type="text" name="slug" value="{{$content->slug}}" />
+        <x-dashboard.form.input title="URL" option="" type="text" name="slug" value="{{$content->slug}}" />
 
         <x-dashboard.form.textarea title="Kurztext (max:255 Zeichen)" option="true" name="subline" value="{{$content->subline}}" />
 

@@ -25,7 +25,7 @@ class BlogUpdateRequest extends FormRequest
     {
         return [
             'title' => 'required|string|min:5|max:100',
-            'slug' => 'required|string|min:5|max:100',
+            'slug' => 'nullable|string|min:5|max:100',
             'subline' => 'nullable|string|max:255',
             'content' => 'nullable|string',
             'status' => 'string|max:2',

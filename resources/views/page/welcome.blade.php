@@ -164,11 +164,11 @@
                 </h1>
                 <p class="mx-auto text-base text-gray-500 sm:max-w-md lg:text-xl md:max-w-3xl">It's never been easier to build beautiful websites that convey your message and tell your story.</p>
                 <div class="relative flex flex-col sm:flex-row sm:space-x-4">
-                    <a href="#_" class="flex items-center w-full px-6 py-3 mb-3 text-lg text-white bg-blue-600 rounded-md sm:mb-0 hover:bg-blue-700 sm:w-auto">
+                    <a href="#_" class="hover-pulse inline-flex items-center justify-center w-full px-8 py-4 text-base font-bold leading-6 text-white bg-blue-600 border border-transparent rounded-full md:w-auto hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-600">
                     Try It Free
                     <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 ml-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
                     </a>
-                    <a href="#_" class="flex items-center px-6 py-3 text-gray-500 bg-gray-100 rounded-md hover:bg-gray-200 hover:text-gray-600">
+                    <a href="#_" class="flex items-center px-8 py-4 text-gray-500 bg-gray-100 rounded-full hover:bg-gray-200 hover:text-gray-600">
                     Learn More
                     </a>
                 </div>
@@ -217,8 +217,8 @@
                 Use our award-winning tools to help you maximize your profits. We've uncovered the correct recipe for converting visitors into customers.
             </p>
             <div class="flex justify-center mt-8 space-x-3">
-                <a href="#" class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-white bg-blue-600 border border-transparent rounded-md shadow hover:bg-blue-700">Sign Up Today</a>
-                <a href="#" class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-blue-700 bg-blue-100 border border-transparent rounded-md hover:bg-blue-200">Learn more</a>
+                <a href="#" class="hover-pulse inline-flex items-center justify-center w-full px-8 py-4 text-base font-bold leading-6 text-white bg-blue-600 border border-transparent rounded-full md:w-auto hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-600">Sign Up Today</a>
+                <a href="#" class="inline-flex items-center justify-center px-8 py-4 text-base font-medium text-blue-700 bg-blue-100 border border-transparent rounded-full hover:bg-blue-200">Learn more</a>
             </div>
         </div>
     </section>
