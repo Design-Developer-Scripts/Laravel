@@ -12,12 +12,10 @@
 
         @livewireStyles
 
-        <!-- Scripts -->
-        <script src="{{ mix('js/app.js') }}" defer></script>
+        
     </head>
-    <body class="font-sans antialiased">
+    <body class="font-sans antialiased bg-gray-50">
         <x-jet-banner />
-
         <div class="min-h-screen bg-gray-100">
             @livewire('navigation-menu')
 
@@ -38,5 +36,7 @@
         @stack('modals')
 
         @livewireScripts
+        <!-- Scripts -->
+        <script src="{{ mix('js/app.js') }}" defer></script>
     </body>
 </html>

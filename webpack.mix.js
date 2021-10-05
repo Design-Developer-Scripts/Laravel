@@ -12,10 +12,17 @@ const tailwindcss = require('tailwindcss'); /* Add this line at the top */
  */
 
 mix.js('resources/js/app.js', 'public/js')
+    /*
     .postCss('resources/css/app.css', 'public/css', [
         require('postcss-import'),
         require('tailwindcss'),
-    ]);
+    ])
+    */
+    .sass('resources/sass/frontend.scss', 'public/css')
+    .options({
+        postCss: [ tailwindcss('./tailwind.config.js') ],
+    })
+    .version();
 
 mix.js('resources/js/dashboard.js', 'public/js')
     .sass('resources/sass/dashboard.scss', 'public/css')

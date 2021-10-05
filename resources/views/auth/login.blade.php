@@ -12,7 +12,7 @@
             </div>
         @endif
 
-        <form method="POST" action="{{ route('login') }}">
+        <form method="POST" action="{{ route('login') }}" class="pt-7">
             @csrf
 
             <div>
@@ -25,24 +25,31 @@
                 <x-jet-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="current-password" />
             </div>
 
+            {{-- 
             <div class="block mt-4">
                 <label for="remember_me" class="flex items-center">
                     <x-jet-checkbox id="remember_me" name="remember" />
                     <span class="ml-2 text-sm text-gray-600">{{ __('Erinnere dich an mich') }}</span>
                 </label>
             </div>
+            --}}
 
-            <div class="flex items-center justify-end mt-4">
+            <div class="mt-7">
+                <x-jet-button class="w-full mb-7 flex justify-center">
+                    <div class"">
+                        {{ __('Einloggen') }}
+                        <svg xmlns="http://www.w3.org/2000/svg" class="mx-2 inline-block" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v18h-6M10 17l5-5-5-5M13.8 12H3"/></svg>
+                    </div>
+                    
+                </x-jet-button>
+
                 @if (Route::has('password.request'))
-                    <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('password.request') }}">
+                    <a class="block mt-5 text-center underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('password.request') }}">
                         {{ __('Haben Sie Ihr Passwort vergessen?') }}
                     </a>
                 @endif
 
-                <x-jet-button class="ml-4">
-                    {{ __('Einloggen') }}
-                    <svg xmlns="http://www.w3.org/2000/svg" class="mx-2 inline-block" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v18h-6M10 17l5-5-5-5M13.8 12H3"/></svg>
-                </x-jet-button>
+                
             </div>
         </form>
     </x-jet-authentication-card>

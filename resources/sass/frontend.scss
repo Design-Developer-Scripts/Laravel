@@ -1,0 +1,138 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../../public/fonts/google/montserrat/Montserrat-Regular.ttf');
+    font-display: swap;
+    
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.25rem;
+    line-height: 1.9em;
+    
+    p,li,a{
+        color: #353535;
+    }
+}
+
+.z-100{
+    z-index: 100;
+}
+.z-9999{
+    z-index: 9999;
+}
+.primary_background_gradient{
+    background-image:linear-gradient(90deg, #1E40AF 0%, #1E3A8A 100%);
+}
+
+.hover-pulse:hover{
+    animation: radial-pulse 1.5s infinite;
+  }
+@keyframes radial-pulse {
+    0%{
+        box-shadow: 0px 0 5px 0px rgba(30, 58, 138, 0.6);
+    }100%{
+    box-shadow: 0 0 0 20px rgba(0, 0, 0, 0);
+    }
+}
+.btn-secondary{
+    animation: radial-pulse-secondary 1.5s infinite;
+}
+@keyframes radial-pulse-secondary {
+    0%{
+        box-shadow: 0px 0 5px 0px rgba(245, 158, 11, 0.6);
+    }100%{
+    box-shadow: 0 0 0 20px rgba(0, 0, 0, 0);
+    }
+}
+
+
+  .bg-primary{
+    background-color: #1e40af;
+  }
+  .btn-primary{
+   background-image: linear-gradient(90deg,#1e40af,#1e3a8a);
+   color:#efefef;
+  }
+  .btn-primary svg{
+   stroke: #efefef; /* linien farbe */
+  }
+  .effect{
+   animation: radial-pulse 1.5s infinite;
+  }
+  .hover_effect:hover{
+     animation: radial-pulse 1.5s infinite;
+  }
+  
+
+
+ .hamburger_menu{
+    .burger{
+        width: 30px;
+        height: 2px;
+        background: #fff;
+        border-radius: 5px;
+        transition: all 0.5s ease-in-out;
+        &::before, &::after{
+            content: '';
+            position: absolute;
+            width: 30px;
+            height: 2px;
+            background: #fff;
+            border-radius: 5px;
+            transition: all 0.5s ease-in-out;
+        }
+        &::before{
+            transform: translateY(-10px);
+        }
+        &::after{
+            transform: translateY(10px);
+        }
+    }
+}
+ #menu_botton{
+    &.active{
+        .hamburger_menu .burger{
+            transform: translateX(-50px);
+            background: transparent;
+
+            &::before{
+                transform: rotate(45deg) translate(35px,-35px);
+            }
+            &::after{
+                transform: rotate(-45deg) translate(35px, 35px);
+            }
+        }
+
+        .item_1{
+            top: -110px;
+        }
+        .item_2{
+            top: -90px;
+            left: -90px;
+        }
+        .item_3{
+            left: -110px;
+        }
+    }
+}
+
+.background-start{
+    background-image: url('https://picsum.photos/1200/800');
+    background-position: bottom;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.masthead-bg{
+    background-image: url('../../public/images/masthead.jpg');
+    background-position: bottom;
+    background-size: cover;
+    background-attachment: fixed;
+}

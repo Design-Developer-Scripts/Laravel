@@ -34,7 +34,7 @@ class Index extends Component
             session()->flash('flash.banner', 'Fehler beim löschen des Eintrags.');
             session()->flash('flash.bannerStyle', 'danger');
         }
-        return redirect()->route('user.index');
+        return redirect()->route('dashboard.user.index');
     }
 
     public function statusFalse($id){

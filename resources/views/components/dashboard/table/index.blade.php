@@ -5,7 +5,7 @@
                 {{$heading}}
             </tr>
         </thead>
-        <tbody class="">
+        <tbody class="w-full">
             {{$slot}}
         </tbody>
     </table>

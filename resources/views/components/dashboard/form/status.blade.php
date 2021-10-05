@@ -1,9 +1,15 @@
 <div>
   <label class="switch">
     @if($status)
-        <input type="checkbox" id="togBtn" name="{{$name}}" checked wire:click="statusFalse({{$id}})">
+        <input type="checkbox" id="togBtn" name="{{$name}}" checked 
+        @if($id)
+          wire:click="statusFalse({{$id}})"
+        @endif>
     @else
-        <input type="checkbox" id="togBtn" name="{{$name}}" wire:click="statusTrue({{$id}})">
+        <input type="checkbox" id="togBtn" name="{{$name}}" 
+        @if($id)
+          wire:click="statusTrue({{$id}})"
+        @endif>
     @endif
   
     <div class="slider round">

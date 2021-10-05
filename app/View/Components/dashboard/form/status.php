@@ -14,7 +14,7 @@ class status extends Component
      *
      * @return void
      */
-    public function __construct(bool $status, string $name, int $id){
+    public function __construct(bool $status, string $name, int $id = null){
         $this->status = $status;
         $this->name = $name;
         $this->id = $id;

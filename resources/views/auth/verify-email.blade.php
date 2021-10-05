@@ -14,21 +14,21 @@
             </div>
         @endif
 
-        <div class="mt-4 flex items-center justify-between">
-            <form method="POST" action="{{ route('verification.send') }}">
+        <div class="mt-4">
+            <form method="POST" action="{{ route('verification.send') }}" class="text-center">
                 @csrf
 
                 <div>
-                    <x-jet-button type="submit">
+                    <x-jet-button type="submit" class="block my-3">
                         {{ __('Verifizierungs-E-Mail erneut senden') }}
                     </x-jet-button>
                 </div>
             </form>
 
-            <form method="POST" action="{{ route('logout') }}">
+            <form method="POST" action="{{ route('logout') }}" class="text-center">
                 @csrf
 
-                <button type="submit" class="underline text-sm text-gray-600 hover:text-gray-900">
+                <button type="submit" class="inline-block py-3 underline text-sm text-center text-gray-600 hover:text-gray-900">
                     {{ __('Abmelden') }}
                 </button>
             </form>

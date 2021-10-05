@@ -4,7 +4,7 @@
             <x-jet-authentication-card-logo />
         </x-slot>
 
-        <div class="mb-4 text-sm text-gray-600">
+        <div class="mb-7 text-sm text-gray-600">
             {{ __('Passwort vergessen? Kein Problem. Teilen Sie uns einfach Ihre E-Mail-Adresse mit und wir senden Ihnen einen Link zum Zurücksetzen des Passworts per E-Mail zu, mit dem Sie ein neues auswählen können.') }}
         </div>
 
@@ -24,7 +24,7 @@
                 <x-jet-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus />
             </div>
 
-            <div class="flex items-center justify-end mt-4">
+            <div class="mt-12">
                 <x-jet-button>
                     {{ __('Link zum Zurücksetzen des E-Mail-Passworts') }}
                 </x-jet-button>

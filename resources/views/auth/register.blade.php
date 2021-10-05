@@ -46,14 +46,17 @@
                 </div>
             @endif
 
-            <div class="flex items-center justify-end mt-4">
-                <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('login') }}">
+            <div class="mt-12">
+                
+                <x-jet-button class="w-full mb-7 flex justify-center">
+                    <div class="">
+                        {{ __('Registrieren') }}
+                    </div>
+                </x-jet-button>
+
+                <a class="block mt-5 text-center underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('login') }}">
                     {{ __('Bereits registriert?') }}
                 </a>
-
-                <x-jet-button class="ml-4">
-                    {{ __('Registrieren') }}
-                </x-jet-button>
             </div>
         </form>
     </x-jet-authentication-card>

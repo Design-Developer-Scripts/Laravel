@@ -2,7 +2,7 @@
     <div class="md:flex md:flex-row-reverse mb-5 w-full">
         
         <div class="w-full md:w-4/12 px-4 my-5">
-            <a href="" class="flex justify-center items-center w-full bg-green-500 hover:bg-green-600 rounded-full py-3 px-4 transition-all duration-300 ease-in-out shadow-sm">
+            <a href="{{route('dashboard.user.create')}}" class="flex justify-center items-center w-full bg-green-500 hover:bg-green-600 rounded-full py-3 px-4 transition-all duration-300 ease-in-out shadow-sm">
                 <div class="flex align-middle">
                     <x-icons.create />
                     <span class="ml-1">Create Neu User</span>
@@ -30,11 +30,11 @@
                         <x-dashboard.form.status status="{{$value->status}}" name="status" id="{{$value->id}}" />
                     </x-dashboard.table.cell>
                     <x-dashboard.table.controller>
-                        <a href="{{route('user.show',$value->id)}}">
+                        <a href="{{route('dashboard.user.show',$value->id)}}">
                             <x-dashboard.button.show />
                         </a>
 
-                        <a href="{{route('user.edit',$value->id)}}">
+                        <a href="{{route('dashboard.user.edit',$value->id)}}">
                             <x-dashboard.button.edit />
                         </a>
 
