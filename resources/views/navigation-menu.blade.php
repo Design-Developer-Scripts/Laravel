@@ -12,7 +12,7 @@
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-jet-nav-link href="{{ route('dashboard.start') }}" :active="request()->routeIs('dashboard.start')">
+                    <x-jet-nav-link href="{{ route('dashboard.home') }}" :active="request()->routeIs('dashboard.home')">
                         {{ __('Dashboard') }}
                     </x-jet-nav-link>
                     <x-jet-nav-link href="{{ route('dashboard.user.index') }}" :active="request()->routeIs('dashboard.user.index')">
@@ -20,6 +20,12 @@
                     </x-jet-nav-link>
                     <x-jet-nav-link href="{{ route('dashboard.distributor.index') }}" :active="request()->routeIs('dashboard.distributor.index')">
                         {{ __('Distributor') }}
+                    </x-jet-nav-link>
+                    <x-jet-nav-link href="{{ route('dashboard.distributorerror.index') }}" :active="request()->routeIs('dashboard.distributorerror.index')">
+                        {{ __('Distributor Errors') }}
+                    </x-jet-nav-link>
+                    <x-jet-nav-link href="{{ route('dashboard.distributorhistory.index') }}" :active="request()->routeIs('dashboard.distributorhistory.index')">
+                        {{ __('Distributor History') }}
                     </x-jet-nav-link>
                     <x-jet-nav-link href="{{ route('dashboard.blog.index') }}" :active="request()->routeIs('dashboard.blog.index')">
                         {{ __('Blog') }}
@@ -148,7 +154,7 @@
     <!-- Responsive Navigation Menu -->
     <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">
         <div class="pt-2 pb-3 space-y-1">
-            <x-jet-responsive-nav-link href="{{ route('dashboard.start') }}" :active="request()->routeIs('dashboard.start')">
+            <x-jet-responsive-nav-link href="{{ route('dashboard.home') }}" :active="request()->routeIs('dashboard.home')">
                 {{ __('Dashboard') }}
             </x-jet-responsive-nav-link>
         </div>

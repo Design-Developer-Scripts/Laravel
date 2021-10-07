@@ -22,7 +22,7 @@ class BlogFactory extends Factory
     public function definition()
     {
         return [
-            'url' => $this->faker->slug,
+            'slug' => $this->faker->slug,
             'image' => $this->faker->imageUrl($width = 640, $height = 480),
             'title' => $this->faker->sentence($nbWords = 6, $variableNbWords = true),
             'subline' => $this->faker->text($maxNbChars = 200),

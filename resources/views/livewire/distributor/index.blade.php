@@ -24,7 +24,7 @@
                     <x-dashboard.table.cell>{{$value->subject}}</x-dashboard.table.cell>
                    
                     <x-dashboard.table.controller>
-                        <a href="{{route('distributor.show',$value->id)}}">
+                        <a href="{{route('dashboard.distributor.show',$value->id)}}">
                             <x-dashboard.button.show />
                         </a>
 

@@ -22,6 +22,6 @@ class isAdmin
 
         session()->flash('flash.banner', 'Zugang verweigert ungültige anfrage.');
         session()->flash('flash.bannerStyle', 'danger');
-        return redirect()->route('dashboard');
+        return redirect()->route('dashboard.home');
     }
 }

@@ -2,11 +2,11 @@
 
 namespace Database\Factories;
 
-use App\Models\Team;
+#use App\Models\Team;
 use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
-use Laravel\Jetstream\Features;
+#use Laravel\Jetstream\Features;
 
 class UserFactory extends Factory
 {
@@ -52,6 +52,7 @@ class UserFactory extends Factory
      *
      * @return $this
      */
+    /*
     public function withPersonalTeam()
     {
         if (! Features::hasTeamFeatures()) {
@@ -66,4 +67,5 @@ class UserFactory extends Factory
             'ownedTeams'
         );
     }
+    */
 }

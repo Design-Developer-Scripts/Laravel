@@ -34,11 +34,7 @@ Route::prefix('dashboard')->name('dashboard.')->middleware(['auth:sanctum','veri
     # Start Dashboard
     Route::get('/',function(){
         return view('page.dashboard');
-    })->name('start');
-
-    
-
-
+    })->name('home');
 
 #########################--ADMIN START--#####################################
     Route::middleware(['administrator'])->group(function(){
@@ -48,6 +44,10 @@ Route::prefix('dashboard')->name('dashboard.')->middleware(['auth:sanctum','veri
         Route::resource('user',\App\Http\Controllers\Admin\UserController::class);
         # Distributor Controller
         Route::resource('distributor',\App\Http\Controllers\Admin\DistributorController::class);
+        // Distributor Error Controller
+        Route::resource('distributorerror',\App\Http\Controllers\Admin\DistributorErrorController::class);
+        // Distributor History Controller
+        Route::resource('distributorhistory',\App\Http\Controllers\Admin\DistributorHistoryController::class);
         # Blog Controller
         Route::resource('blog',\App\Http\Controllers\Admin\BlogController::class);
     });

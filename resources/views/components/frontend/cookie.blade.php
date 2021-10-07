@@ -122,13 +122,13 @@
           </div>
   
           <div class="text-left mb-7">
-            <p class="text-2xl leading-6 font-medium text-gray-900 mb-2">Wir verwenden Cookies</p>
+            <p class="text-xl leading-6 font-medium text-gray-900 mb-2">Wir verwenden Cookies</p>
             <p class="text-sm text-gray-500">Damit wollen wir unsere Webseiten nutzerfreundlicher gestalten und unseren Service fortlaufend verbessern. Wenn Sie die Webseiten weiter nutzen, stimmen Sie dadurch der Verwendung von Cookies zu.</p>
           </div>
         </div>
         <form method="POST" action="{{route('cookie.selection')}}">
             @csrf
-            <p>Bitte wählen Sie aus:</p>
+            <p class="text-sm">Bitte wählen Sie aus:</p>
             <div class="md:grid md:grid-cols-2 md:gap-4 my-4">
                 <div>
                     <svg class="inline-block" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
@@ -141,17 +141,17 @@
             </div>
         
             <div class="md:grid md:grid-cols-2 md:gap-4">
-                <button type="submit" class="block w-full rounded-md border-0 border-transparent shadow-sm px-10 py-3 my-3 text-md text-gray-900 focus:outline-none bg-gray-100 hover:bg-gray-200 transition duration-300 ease-in-out">
+                <button type="submit" class="block w-full text-sm rounded-md border-0 border-transparent shadow-sm px-8 py-3 my-3 text-gray-900 focus:outline-none bg-gray-100 hover:bg-gray-200 transition duration-300 ease-in-out">
                     Auswahl Bestätigen
                 </button>
             
-                <a href="{{route('cookie.selection.all')}}" class="block w-full text-center rounded-md border-0 border-transparent shadow-sm px-10 py-3 my-3 text-md text-white focus:outline-none btn primary_background_gradient hover:bg-blue-900 transition duration-300 ease-in-out">
+                <a href="{{route('cookie.selection.all')}}" class="block w-full text-sm text-center rounded-md border-0 border-transparent shadow-sm px-8 py-3 my-3 text-white focus:outline-none btn primary_background_gradient hover:bg-blue-900 transition duration-300 ease-in-out">
                     Alle Zulassen
                 </a>
             </div>
         </form>
         <div class="flex justify-center mt-5">
-            <a href="{{route('datenschutzerklaerung')}}" class="rounded-md text-md text-gray-500 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-300">
+            <a href="{{route('datenschutzerklaerung')}}" class="rounded-md text-sm text-gray-500 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-300">
                 Datenschutzerklärung
             </a>
         </div>

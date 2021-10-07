@@ -46,7 +46,10 @@ class DistributorController extends Controller
      */
     public function show(Distributor $distributor)
     {
-        //
+        $content = Distributor::find($distributor);
+        print'<pre>';
+        print_r($content);
+        print'</pre>';
     }
 
     /**
